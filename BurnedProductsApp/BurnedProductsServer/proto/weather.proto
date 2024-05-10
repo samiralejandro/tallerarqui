@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package weather;
+
+option csharp_namespace = "WeatherNamespace";
+
+service WeatherService {
+  rpc GetWeatherForecast (WeatherRequest) returns (WeatherForecastResponse);
+  rpc SendToB (DataRequest) returns (DataResponse);
+}
+
+message WeatherRequest {
+  int32 days = 1;
+}
+
+message WeatherForecastResponse {
+  repeated WeatherData forecasts = 1;
+}
+
+message WeatherData {
+  string date = 1;
+  int32 temperatureC = 2;
+  string summary = 3;
+}
+
+message DataRequest {
+  string data = 1;
+}
+
+message DataResponse {
+  string response = 1;
+}

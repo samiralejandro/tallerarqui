@@ -1,0 +1,2 @@
+obj\Debug\net8.0/Weather.cs \
+obj\Debug\net8.0/WeatherGrpc.cs: ../BurnedProductsServer/proto/weather.proto
